@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title> Mi Blog </title>
+  </head>
+
+  <body>
+
+        	<!--
+      		Codigo para titulos y subtitulos de mi página
+      		-->
+      <h1 align="center"> <font face="Tahoma"> Firma este libro de Visitas </font> </h1>
+      <h2 align="center"> <font face="Tahoma"> Artículos </h2>
+
+      		<!--
+      		Codigo para poner texto que parpadea
+      		-->
+		    <script type="text/javascript">
+		    window.setInterval (BlinkIt, 500);
+			var color = "red";
+			function BlinkIt () {
+			var blink = document.getElementById ("blink");
+			color = (color == "#ffffff")? "red" : "#ffffff";
+			blink.style.color = color;
+			blink.style.fontSize='36px';}
+			</script>
+			<div id="blink" align="center"> ¡Hola Mundo!</div>
+
+			<!--
+      		Codigo para hacer divisores
+      		-->
+		<hr size="2px" width="80%" noshade="noshade" align="center" />
+			<div id="nuevaEntrada"> 
+				<p align="center"> <font face="Tahoma"> <font color="blue"> Nueva Historia </font> </p> 
+			</div>
+      	<hr size="2px" width="80%" noshade="noshade" align="center" />
+
+			<!--
+      		Codigo para los botones
+      		-->
+      	<div id="principal"> 
+      		<p > </p> 
+      	</div>
+        
+          <center>
+            <div id="textoAgregado"> </div>
+            <input type="button" name="texto-grande" value="Texto Grande"/>
+            <input type="button" name="texto-mediano" value="Texto Mediano"/>
+            <input type="button" name="texto-chico" value="Texto Chico"/>
+            <input type="button" name="color-texto" value="Color Texto"/>
+            <input type="button" name="color-fondo" value="Color Fondo"/>
+            <input type="button" name="alinear-izquierda" value="Alinear Izquierda"/>
+            <input type="button" name="centrar" value="Centrar"/>
+            <input type="button" name="alinear-derecha" value="Alinear Derecha"/>
+            
+
+            <br>
+            <br>
+
+      		<!--
+      		Codigo para la caja de texto
+      		-->
+            <td>
+            <textarea rows=5 cols=120 class="btn-sm" name="comentarios" id="articulo" onkeypress="escribir();"> </textarea>
+            </td>
+
+            <br>
+ 
+          </center>
+      
+  </body>
+
+  	<div>
+        <h3> Así se ve tu artículo...  </h3>
+        <p name="principal" id="textoAgregado" oninput="segundo()"> 
+        <div id="resultado"></div> </p>  
+        <input type="submit" value="Enviar" onclick="segundo()">
+    </div>
+
+
+  <script type="text/javascript" src="miBlog.js"></script>
+</html>
+
+
+
+<!--
+Con este codigo intentaba experimentar la Vista previa de TextArea
+<textarea id="editor"></textarea>
+<div id="resultado"></div>
+-->
